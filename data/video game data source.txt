@@ -1,0 +1,3 @@
+The raw data set used for this assignment is Rush Kirubi's Video Game Sales with Ratings (Video game sales from Vgchartz and corresponding ratings from Metacritic).
+
+It can be obtained by going to https://www.kaggle.com/rush4ratio/video-game-sales-with-ratings

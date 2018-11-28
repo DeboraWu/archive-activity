@@ -1,0 +1,66 @@
+# Debora Wu - Module 4 - Video Game Sales
+#
+# MYSQL commands used to transform data
+
+
+# create table sales_genre that includes Genre, Global_sales, and Critic_Score
+
+CREATE TABLE sales_genre
+(
+Genre string,
+Global_Sales float,							
+Critic_Score int,
+);
+
+
+# copy data from video games sales dataset to table
+
+INSERT OVERWRITE TABLE sales_genre
+SELECT Genre, Global_Sales, Critic_Score
+FROM sales;
+
+
+# check to make sure table is filled
+
+SELECT * FROM sales_genre LIMIT 10;
+
+
+# round Global Sales
+
+INSERT OVERWRITE TABLE sales_genre
+SELECT Genre, ROUND(Global_Sales) AS Global_Sales, Critic_Score
+FROM sales_genre;
+
+
+# check to see if executed correctly
+
+SELECT * FROM sales_genre LIMIT 10;
+
+
+# filter out games with no critic score
+
+INSERT OVERWRITE TABLE sales_genre
+SELECT *
+FROM sales_genre
+WHERE Critic_Score > 0;
+
+
+# check to see if executed properly
+
+SELECT * FROM sales_genre LIMIT 10;
+
+
+# sort table by descending order
+
+INSERT OVERWRITE TABLE sales_genre
+SELECT *
+FROM sales_genre
+ORDER BY Critic_Score DESC;
+
+
+# final check to see if executed properly
+
+SELECT * FROM sales_genre LIMIT 10;
+
+
+# simulation code DA-M4-VG100-FS1

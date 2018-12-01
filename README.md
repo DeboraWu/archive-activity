@@ -9,7 +9,11 @@ When comparing video games in the Sports genre vs. Shooter genre, the global sal
 The repository includes:
 
 /data	- outlines which video games sales dataset I used and where it can be obtained
+
 /munge	- describes which transformations were performed on the data
+
 /src	- explains which aggregations were applied to the data
+
 /reports	- provides visualizations of the data
+
 README	- this summary file
